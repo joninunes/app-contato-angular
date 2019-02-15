@@ -1,0 +1,17 @@
+<div class="example-container">
+<form class="example-form" (ngSubmit)="onSubmit()"> 
+    
+    <mat-form-field class="example-full-width">
+      <label>Nome</label>
+      <input matInput placeholder="Informe o nome" [(ngModel)]="contato.nome" name="nome"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <label>Telefone</label>
+      <input matInput placeholder="Informe o telefone" [(ngModel)]="contato.telefone" name="telefone"/>
+    </mat-form-field>
+  
+    <button type="submit" mat-raised-button color="primary">Salvar</button>
+  
+  </form>
+</div>

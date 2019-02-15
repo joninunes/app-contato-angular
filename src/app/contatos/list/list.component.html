@@ -1,0 +1,18 @@
+<div class="card mt-2" *ngFor="let contato of contatos | async">  
+    <table style="widows: 80%">      
+      <tr>
+        <!-- Linhas  -->
+        <td>
+          <h5 mat-line>{{contato.nome}}</h5> </td>
+        <td>
+          <p mat-line>{{contato.telefone}}</p> </td>
+        <td>
+            <button mat-icon-button color="primary" type="button" (click)="edit(contato, contato.key)">Editar</button>
+        </td>
+        <td>
+            <button  mat-icon-button color="warn" type="button" (click)="delete(contato.key)">Excluir</button>
+        </td>
+      </tr>      
+    </table>
+  
+</div>
