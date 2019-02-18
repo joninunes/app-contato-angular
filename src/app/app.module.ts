@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -35,8 +36,12 @@ import {MatListModule} from '@angular/material/list';
     MatCardModule,
     MatButtonModule,
     MatListModule
+    
   ],
-  providers: [],
+  providers: [
+    {provide: APP_BASE_HREF, useValue : '/'}
+  ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
